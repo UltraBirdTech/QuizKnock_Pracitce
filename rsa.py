@@ -24,7 +24,8 @@ def main():
     M = calc_M(c, d, n)
     print("M: " + str(M))
 
-    exchange_M_to_str(M)
+    result_str = exchange_M_to_str(M)
+    print('RESULT: ' + result_str)
 
 # p * q を行い n の値を求める
 def calc_n(p, q):
@@ -52,6 +53,6 @@ def exchange_M_to_str(m):
     result_str = ''
     for s in  list(filter(None, re.split('(..)', str(m)))):
         result_str += alphabet_list[int(s) - 1]
-    print('RESULT: ' + result_str)
+    return result_str
 
 main()
