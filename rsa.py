@@ -47,7 +47,7 @@ def calc_M(c, d, n):
     return (c**d) % n
 
 def exchange_M_to_str(m):
-    alphabet_array = {
+    alphabet_dict = {
         1: "A",
         2: "B",
         3: "C",
@@ -77,7 +77,7 @@ def exchange_M_to_str(m):
     }
     result_str = ''
     for s in  list(filter(None, re.split('(..)', str(m)))):
-        result_str += alphabet_array.get(int(s))
+        result_str += alphabet_dict.get(int(s))
     print('RESULT: ' + result_str)
 
 main()
