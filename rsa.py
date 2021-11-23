@@ -36,9 +36,7 @@ def calc_n(p, q):
 def calc_m(e, p, q):
     for i in range(e):
         if i * (p - 1) * (q - 1) % e == e - 1:
-            m = i
-            break
-    return m
+            return i
 
 # d を求める
 def calc_d(m, p, q, e):
@@ -51,7 +49,7 @@ def calc_M(c, d, n):
 def exchange_M_to_str(m):
     alphabet_list = list(string.ascii_uppercase) # Python の string を使い、大文字のアルファベットのリストを作る
     result_str = ''
-    for s in  list(filter(None, re.split('(..)', str(m)))): # m を2文字ずつlistに入れる。''をfilter()で取り除く。
+    for s in list(filter(None, re.split('(..)', str(m)))): # m を2文字ずつlistに入れる。''をfilter()で取り除く。
         result_str += alphabet_list[int(s) - 1]
     return result_str
 
