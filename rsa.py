@@ -46,6 +46,7 @@ def calc_d(m, p, q, e):
 def calc_M(c, d, n):
     return (c**d) % n
 
+# 解読した文字列 M から文字列に変換する
 def exchange_M_to_str(m):
     alphabet_list = list(string.ascii_uppercase) # Python の string を使い、大文字のアルファベットのリストを作る
     result_str = ''
